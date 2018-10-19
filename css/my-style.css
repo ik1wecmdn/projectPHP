@@ -1,0 +1,98 @@
+.judul{
+	padding-top: 10px;
+}
+.judul img{
+	float: left;
+	margin-right: 15px;
+}
+.judul h2{
+	color : #006DF0;
+	font-weight: bold;
+	margin-top: 5px;
+}
+.alamat{
+	text-align: right;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+.alamat h4,p{
+	margin: 0px;
+	color: #282923;
+}
+.alamat img{
+	width: 36px;
+	height: 36px;
+}
+
+.menu{
+	background-image: url(../images/bg-menu.jpg);
+  	background-repeat: repeat-x;
+  	background-color: #0F3065;
+}
+
+.slider{
+	background-color: #023B82;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+.slider .carousel-item{
+  	border: 5px white solid;  
+}
+
+.platform{
+	margin:20px auto 20px;
+}
+.platform .card{
+	margin-bottom: 10px;
+}
+
+.content{
+	margin-top: 20px;
+  	margin-bottom: 20px;
+}
+.content p{
+  	text-align: justify;
+}
+.content h4{
+	margin-top: 15px;
+}
+
+.iklan{
+	margin: 10px;
+}
+
+.blog-item{
+	border-bottom: 2px lightgray dashed;
+	padding: 15px 10px 25px 30px;
+	margin-bottom: 10px;
+}
+
+.blog-title{
+	color: #282923;
+}
+.blog-date{
+	color: gray;
+}
+
+.blog-more{
+	margin-top: 15px;
+}
+
+
+.footer{
+	background-color: #023B82;
+	color: white;
+	padding: 15px 5px;
+}
+
+@media (max-width: 767.98px) { 
+  .judul{
+    text-align : center;
+  }
+  .judul img{
+    float: none;
+  }
+  .alamat{
+    text-align: center;
+  }
+}
