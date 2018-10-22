@@ -27,24 +27,27 @@
 					<div class="col-md-8">
 						<h1>Blogs</h1>
 						
+						<?php
+						date_default_timezone_set("Asia/Jakarta");
+						require_once('database.php');
+						$db = new MyDatabase();
+						$dt = $db->GetData("SELECT * FROM blogs WHERE tanggal<=? ORDER BY id_blog DESC", [date('Y-m-d H:i:s')]);
+						foreach($dt as $row){
+						?>
+
 						<div class="blog-item">
-							<h2 class="blog-title">Blog Title</h2>
-							<p class="blog-date">22 September 2018 by <a href="#">@mahasiswa</a></p>
-							<p class="blog-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-							<a class="blog-more btn btn-outline-info" href="#">Read More</a>
+							<h2 class="blog-title"><?php echo $row['judul_blog']; ?></h2>
+							<p class="blog-date"><?php echo $row['tanggal'] ?> by <a href="#">@mahasiswa</a></p>
+							
+							<?php
+							echo $row['isi_blog'];
+							?>
+
+							
 						</div>
-						<div class="blog-item">
-							<h2 class="blog-title">Blog Title</h2>
-							<p class="blog-date">22 September 2018 by <a href="#">@mahasiswa</a></p>
-							<p class="blog-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-							<a class="blog-more btn btn-outline-info" href="#">Read More</a>
-						</div>
-						<div class="blog-item">
-							<h2 class="blog-title">Blog Title</h2>
-							<p class="blog-date">22 September 2018 by <a href="#">@mahasiswa</a></p>
-							<p class="blog-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-							<a class="blog-more btn btn-outline-info" href="#">Read More</a>
-						</div>
+						<?php
+						} //tutupe foreach
+						?>
 					</div>
 					<div class="col-md-4">
 						

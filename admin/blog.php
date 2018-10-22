@@ -94,6 +94,7 @@
   <!-- /Start your project here-->
 
   <!-- SCRIPTS -->
+
   <!-- JQuery -->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <!-- Bootstrap tooltips -->
@@ -111,6 +112,7 @@
       $('.dataTables_length').addClass('bs-select');
     });
   </script>
+
 
 </body>
 
