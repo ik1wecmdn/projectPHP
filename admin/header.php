@@ -30,7 +30,7 @@
             <a class="nav-link" href="blog.php">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
+            <a class="nav-link" href="gallery.php">Gallery</a>
           </li>
         </ul>
         <ul class="navbar-nav nav-flex-icons">
