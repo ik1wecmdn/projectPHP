@@ -48,85 +48,28 @@
 						<h1>Gallery</h1>
 						
 						<div class="row">
+
+							<?php 
+							require_once('database.php');
+							$db = new MyDatabase();
+							$dtGalery = $db->GetData("SELECT * FROM gallery");
+							foreach($dtGalery as $row){
+							?>
+
 							<div class="col-md-4">
 								<div class="card">
-								  <a href="images/slide1.jpg" data-lightbox="img1" data-title="Console Application - App1"><img class="card-img" src="images/slide1.jpg" alt="Card image cap"></a>
-								  <a href="#"><div class="card-title">Console Application - App1</div></a>
+								  <a href="images/slide1.jpg" data-lightbox="img1" data-title="Console Application - App1"><img class="card-img" src="<?php echo $row['url']; ?>" alt="Card image cap"></a>
+								  <a href="#"><div class="card-title"><?php echo $row['nama']; ?></div></a>
 								</div>
 							</div>
-							<div class="col-md-4">
-								<div class="card">
-								  <a href="images/slide1.jpg" data-lightbox="img2" data-title="Console Application - App2"><img class="card-img" src="images/slide1.jpg" alt="Card image cap"></a>
-								  <a href="#"><div class="card-title">Console Application - App2</div></a>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="card">
-								  <a href="images/slide1.jpg" data-lightbox="img3" data-title="Console Application - App3"><img class="card-img" src="images/slide1.jpg" alt="Card image cap"></a>
-								  <a href="#"><div class="card-title">Console Application - App3</div></a>
-								</div>
-							</div>
+							
+							<?php
+							} //tutupe foreach
+							?>
+
+
 						</div>
-						<div class="row">
-							<div class="col-md-4">
-								<div class="card">
-								  <a href="images/slide2.jpg" data-lightbox="img4" data-title="Console Application - App3"><img class="card-img" src="images/slide2.jpg" alt="Card image cap"></a>
-								  <div class="card-title">Web Application - App1</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="card">
-								  <a href="images/slide2.jpg" data-lightbox="img5" data-title="Console Application - App3"><img class="card-img" src="images/slide2.jpg" alt="Card image cap"></a>
-								  <div class="card-title">Web Application - App2</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="card">
-								  <a href="images/slide2.jpg" data-lightbox="img6" data-title="Console Application - App3"><img class="card-img" src="images/slide2.jpg" alt="Card image cap"></a>
-								  <div class="card-title">Web Application - App3</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-4">
-								<div class="card">
-								  <a href="images/slide3.jpg" data-lightbox="img7" data-title="Console Application - App3"><img class="card-img" src="images/slide3.jpg" alt="Card image cap"></a>
-								  <div class="card-title">Web Application - App4</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="card">
-								  <a href="images/slide3.jpg" data-lightbox="img8" data-title="Console Application - App3"><img class="card-img" src="images/slide3.jpg" alt="Card image cap"></a>
-								  <div class="card-title">Web Application - App5</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="card">
-								  <a href="images/slide3.jpg" data-lightbox="img9" data-title="Console Application - App3"><img class="card-img" src="images/slide3.jpg" alt="Card image cap"></a>
-								  <div class="card-title">Web Application - App6</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-4">
-								<div class="card">
-								  <a href="images/slide4.jpg" data-lightbox="img9" data-title="Console Application - App3"><img class="card-img" src="images/slide4.jpg" alt="Card image cap"></a>
-								  <div class="card-title">Mobile Application - App1</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="card">
-								  <a href="images/slide4.jpg" data-lightbox="img10" data-title="Console Application - App3"><img class="card-img" src="images/slide4.jpg" alt="Card image cap"></a>
-								  <div class="card-title">Mobile Application - App2</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="card">
-								  <a href="images/slide4.jpg" data-lightbox="img11" data-title="Console Application - App3"><img class="card-img" src="images/slide4.jpg" alt="Card image cap"></a>
-								  <div class="card-title">Mobile Application - App3</div>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 					<div class="col-md-4">
 						<!-- iklan -->
